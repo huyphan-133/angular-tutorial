@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+    <div class="panel-heading" (click)="toggleContent()">
+        {{title}}
+        <i class="bi" [ngClass]="{
+            'bi-chevron-down': !showedContent,
+            'bi-chevron-up': showedContent
+        }"></i>
+    </div>
+    <div class="panel-body" [hidden]="!showedContent">
+        <ng-content></ng-content>
+    </div>
+</div>

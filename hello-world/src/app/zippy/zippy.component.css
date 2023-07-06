@@ -1,0 +1,9 @@
+.bi {
+    float: right;
+    
+}
+
+.panel-heading{
+    font-weight: bold;
+    cursor:pointer
+}

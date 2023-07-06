@@ -1,0 +1,23 @@
+<form class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
+    <h2 class="form-signin-heading">
+        Please sign in
+    </h2>
+
+    <div class="alert alert-danger" *ngIf="invalidLogin">
+        The username or password is invalid.
+    </div>
+
+    <div class="form-group">
+        <label for="inputEmail">Email address</label>
+        <input id="inputEmail" type="email" name="email" ngModel class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" id="password" ngModel >
+    </div>
+
+    <button class="btn btn-primary" type="submit">
+        Login
+    </button>
+</form>
